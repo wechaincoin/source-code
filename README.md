@@ -115,6 +115,95 @@ make
 _Your executables will be located in `build/src` folder._
 
 
+### Compile on Manjaro (Arch) Linux
+
+**1. Install dependencies**
+
+- Install dependencies
+
+```
+sudo pacman -S base-devel python gcc git cmake gflags boost snappy lz4 zlib bzip2 zstd
+```
+
+- Install RockSDB from source
+
+```
+git clone https://github.com/facebook/rocksdb.git
+cd rocksdb
+USE_SSE=1 make static_lib
+```
+
+
+- Optional: create folder _wechaincoin_
+
+If you want to have all files related to __wechaincoin__  in one folder, run the following code:
+
+```
+mkdir wechaincoin
+```
+
+You can create the folder anywhere you like, we will assume it to be `/home/USER/wechaincoin` for this tutorial, where `USER` is your username.
+
+- Enter the folder:
+
+```
+cd wechaincoin
+```
+
+**2. Clone source code from GitHub**
+
+```
+git clone https://github.com/wechaincoin/source-code.git
+```
+
+**3. Give the correct permission**
+
+- navigate to:
+
+```
+cd source-code/external/rocksdb/build_tools
+```
+
+- Make the following files executable:
+
+```
+chmod +x build_detect_platform
+chmod +x version.sh
+```
+
+**4. Build executables**
+
+- Navigate back to root folder
+
+```
+cd /home/USER/wechaincoin/source-code
+```
+
+- prepare the build
+
+```
+mkdir build
+cd build
+```
+
+```
+cmake ..
+```
+
+- Export flags
+
+```
+export CXXFLAGS="-std=gnu++11"
+```
+
+- Make/Build
+
+```
+make
+```
+
+_Your executables will be located in `build/src` folder._
+
 
 ### Compile on Windows 7/8/10
 
