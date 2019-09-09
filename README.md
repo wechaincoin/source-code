@@ -211,10 +211,11 @@ _Your executables will be located in `build/src` folder._
 
 - Visual Studio 2017 Community Edition with desktop development with C++ and the VC++ v140 toolchain features selected
 - Boost 1.59.0, with the installer for MSVC 14
+  - Can be downloaded from [source forge](https://sourceforge.net/projects/boost/files/boost-binaries/1.59.0/).
 
 **2. Build**
 
-- From the start menu, open 'x64 Native Tools Command Prompt for vs2017'
+- From the start menu, open 'x64 Native Tools Command Prompt for vs2017' (or Developer Command Prompt for Visual Studio)
 
 
 ``
