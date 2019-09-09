@@ -105,7 +105,7 @@ void run(CryptoNote::WalletGreen &wallet, CryptoNote::INode &node,
 
     do
     {
-        std::cout << InformationMsg("eGameCash v"
+        std::cout << InformationMsg("WeChainCoin v"
                                   + std::string(PROJECT_VERSION)
                                   + " Simplewallet") << std::endl;
 
