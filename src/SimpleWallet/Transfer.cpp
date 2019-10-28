@@ -661,7 +661,7 @@ Maybe<uint64_t> getFee()
         std::cout << std::endl 
                   << InformationMsg("What fee do you want to use?")
                   << std::endl
-                  << "Hit enter for the default fee of 0.00000100 SCSX: ";
+                  << "Hit enter for the default fee of 0.00000100 WXTC: ";
 
         std::getline(std::cin, stringAmount);
 
@@ -722,7 +722,7 @@ Maybe<uint64_t> getTransferAmount()
         std::string stringAmount;
 
         std::cout << std::endl
-                  << InformationMsg("How much SCSX do you want to send?: ");
+                  << InformationMsg("How much WXTC do you want to send?: ");
 
         std::getline(std::cin, stringAmount);
 
@@ -781,7 +781,7 @@ bool parseFee(std::string feeString)
     }
     else if (fee < CryptoNote::parameters::MINIMUM_FEE)
     {
-        std::cout << WarningMsg("Fee must be at least 0.00000100 SCSX!") << std::endl;
+        std::cout << WarningMsg("Fee must be at least 0.00000100 WXTC!") << std::endl;
         return false;
     }
 
@@ -834,7 +834,7 @@ bool parseAddress(std::string address)
     else if (!valid)
     {
         std::cout << WarningMsg("Failed to parse address, address is not a "
-                                "valid SCSX address!") << std::endl
+                                "valid WXTC address!") << std::endl
                   << std::endl;
         return false;
     }
@@ -896,7 +896,7 @@ bool parseAmount(std::string amountString)
         std::cout << WarningMsg("Failed to parse amount! Ensure you entered "
                                 "the value correctly.")
                   << std::endl
-                  << "Please note, the minimum you can send is 0.00000001 SCSX,"
+                  << "Please note, the minimum you can send is 0.00000001 WXTC,"
                   << std::endl
                   << "and you can only use 8 decimal places."
                   << std::endl;

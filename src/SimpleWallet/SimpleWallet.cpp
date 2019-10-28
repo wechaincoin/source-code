@@ -261,7 +261,7 @@ std::shared_ptr<WalletInfo> createViewWallet(CryptoNote::WalletGreen &wallet)
 
     while (true)
     {
-        std::cout << "Public SCSX address: ";
+        std::cout << "Public WXTC address: ";
 
         std::getline(std::cin, address);
         boost::algorithm::trim(address);
@@ -977,7 +977,7 @@ void help(bool viewWallet)
               << SuccessMsg("bc_height", 25)
               << "Show the blockchain height" << std::endl
               << SuccessMsg("balance", 25)
-              << "Display how much SCSX you have" << std::endl
+              << "Display how much WXTC you have" << std::endl
               << SuccessMsg("export_keys", 25)
               << "Export your private keys" << std::endl
               << SuccessMsg("address", 25)
@@ -992,7 +992,7 @@ void help(bool viewWallet)
     if (viewWallet)
     {
         std::cout << InformationMsg("Please note you are using a view only "
-                                    "wallet, and so cannot transfer SCSX.")
+                                    "wallet, and so cannot transfer WXTC.")
                   << std::endl;
     }
     else
@@ -1008,7 +1008,7 @@ void help(bool viewWallet)
                   << "Fully optimize your wallet to send large amounts"
                   << std::endl
                   << SuccessMsg("transfer", 25)
-                  << "Send SCSX to someone" << std::endl;
+                  << "Send WXTC to someone" << std::endl;
     }
 }
 
@@ -1544,7 +1544,7 @@ ColouredMsg getPrompt(std::shared_ptr<WalletInfo> &walletInfo)
 
     std::string shortName = walletName.substr(0, promptLength);
 
-    return InformationMsg("[SCSX " + shortName + "]: ");
+    return InformationMsg("[WXTC " + shortName + "]: ");
 }
 
 void connectingMsg()
@@ -1559,9 +1559,9 @@ void viewWalletMsg()
 {
     std::cout << InformationMsg("Please remember that when using a view wallet "
                                 "you can only view incoming transactions!")
-              << std::endl << "This means if you received 100 SCSX and then "
-              << "sent 50 SCSX, your balance would appear to still be 100 "
-              << "SCSX." << std::endl
+              << std::endl << "This means if you received 100 WXTC and then "
+              << "sent 50 WXTC, your balance would appear to still be 100 "
+              << "WXTC." << std::endl
               << "To effectively use a view wallet, you should only deposit "
               << "to this wallet." << std::endl
               << "If you have since needed to withdraw, send your remaining "
